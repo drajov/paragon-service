@@ -7,5 +7,5 @@ app.listen(2022, () => {
 });
 
 app.get('/hello', (req, res) => {
-    res.send({message: "Hello to all Paragon students!"}).status(200);
+    res.send({message: process.env.APP_MESSAGE ? process.env.APP_MESSAGE : 'Hello Paragon!'}).status(200);
 });
